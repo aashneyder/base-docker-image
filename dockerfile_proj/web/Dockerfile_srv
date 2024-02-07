@@ -1,0 +1,11 @@
+FROM my_debian_base:v1
+RUN apt update && \
+    apt install python3 -y && \
+    apt install -y python3-pip 
+RUN apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev 
+RUN pip3 install flask
+WORKDIR /
+COPY ./server.py .
+CMD ["python3", "/server.py"]
+
+

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  hello:
+    image: base_img_hello:latest
+    working_dir: /app
+    command: ["python3", "main.py"]
+  loop:
+    image: base_img_loop:latest
+    working_dir: /app
+    command: ["python3", "loop.py"]

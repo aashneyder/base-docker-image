@@ -1,0 +1,11 @@
+version: '3'
+services:
+  srv:
+    image: web-srv-img:v1.1
+    ports:
+      - "80:80"
+  db:
+    image: web-db-img:v1.1
+    volumes:
+      - ./data:/data
+
